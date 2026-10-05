@@ -1,0 +1,3 @@
+# Keep LF everywhere so Prettier checks pass on every OS.
+* text=auto eol=lf
+*.png binary
