@@ -5,6 +5,20 @@ Automation Assessment. It contains a React loan analytics app, a Playwright + Cu
 that tests it (UI, API and SQL), the A3 API tests against JSONPlaceholder, both A4 SQL
 scenarios, and the AI self-healing locator exercise with a working proof of concept.
 
+**View in the browser (no setup needed):**
+
+| What                                                 | Link                                                                                                                                                                                                     |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Live app                                             | https://vinu3783.github.io/streamhub-qa-assessment/                                                                                                                                                      |
+| Main test report (35/35 passed)                      | https://vinu3783.github.io/streamhub-qa-assessment/reports/cucumber/all.html                                                                                                                             |
+| API assessment-expectation report (fails by design)  | https://vinu3783.github.io/streamhub-qa-assessment/reports/cucumber/api-assessment-expectations.html                                                                                                     |
+| Self-healing broken-locator report (fails by design) | https://vinu3783.github.io/streamhub-qa-assessment/reports/cucumber/self-healing.html                                                                                                                    |
+| SQL output: Scenario 1 · Scenario 2                  | [round trips](https://vinu3783.github.io/streamhub-qa-assessment/reports/sql/round_trip_transactions.png) · [streaks](https://vinu3783.github.io/streamhub-qa-assessment/reports/sql/player_streaks.png) |
+
+These pages are published from this repository by
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml). GitHub shows `.html` files in the
+repository as source code, so use the links above to see the reports rendered.
+
 ![Cucumber HTML report: 35 of 35 scenarios passed](docs/images/cucumber-report-summary.png)
 
 ## Contents
