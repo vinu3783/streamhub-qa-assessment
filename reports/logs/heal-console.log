@@ -1,0 +1,16 @@
+
+> loan-analytics-dashboard@1.0.0 heal
+> tsx tools/self-healing/heal.ts
+
+Healing loanAmountById (#loanAmount)
+  not-found: page.getByTestId('loan-amount-input')
+Healing calculateByAbsoluteXPath (xpath=/html/body/div[1]/main/div[2]/form/button[1])
+  not-found: page.getByTestId('calculate-button')
+Healing emiByPosition (.summary-grid > article:nth-child(2) > p:nth-child(2))
+  wrong-target: page.getByTestId('emi-value')
+Healing calculateByStaleText (role=button[name="Compute EMI"])
+  not-found: page.getByTestId('calculate-button')
+Healing chartCanvasByLibraryClass (canvas.chartjs-render-monitor)
+  not-found: human review — Top candidates point at different elements with close scores (0.64 vs 0.64).
+
+Report written to reports\self-healing/healing-report.md

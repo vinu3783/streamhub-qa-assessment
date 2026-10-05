@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      # Tests run against the production build served by `vite preview`.
+      BASE_URL: http://localhost:4173
+      API_BASE_URL: https://jsonplaceholder.typicode.com
+      HEADLESS: 'true'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm run typecheck
+      - run: npm run build
+
+      - name: Start the app
+        run: |
+          npm run preview &
+          for attempt in $(seq 1 30); do
+            curl --silent --fail "$BASE_URL" > /dev/null && exit 0
+            sleep 1
+          done
+          echo "App did not start at $BASE_URL" && exit 1
+
+      - name: UI + API + SQL tests
+        run: npm test
+
+      - name: SQL evidence
+        run: npm run sql
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: reports/

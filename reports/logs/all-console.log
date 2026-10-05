@@ -1,0 +1,12 @@
+
+> loan-analytics-dashboard@1.0.0 test
+> cucumber-js --profile default
+
+(node:26332) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+....................................................................................................................................................................................................................................................................................
+
+2 hooks (2 passed)
+35 scenarios (35 passed)
+274 steps (274 passed)
+0m 14.950s (0m 14.847s executing your code)

@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="14.95" tests="35" skipped="0" failures="0" errors="0" timestamp="2026-10-05T12:01:21.904Z">
+  <testcase classname="JSONPlaceholder POST /posts — observed handling of boundary and invalid data" name="Control — a valid post is created" time="0.649">
+    <system-out><![CDATA[When I create a post with "a valid post"....................................passed
+Then the response status is 201.............................................passed
+And the response is JSON....................................................passed
+And the response echoes every submitted field...............................passed
+And the response assigns a numeric id.......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="JSONPlaceholder POST /posts — observed handling of boundary and invalid data" name="Payload with &lt;payload> is accepted without a server-side failure - #1.1: Payload with an excessively long title is accepted without a server-side failure" time="1.272">
+    <system-out><![CDATA[When I create a post with "an excessively long title".......................passed
+Then the response is not a server error.....................................passed
+And the response status is 201..............................................passed
+And the response echoes every submitted field...............................passed
+And the response does not invent a userId...................................passed
+And the gap against the assessment's 4xx expectation is recorded............passed]]></system-out>
+  </testcase>
+  <testcase classname="JSONPlaceholder POST /posts — observed handling of boundary and invalid data" name="Payload with &lt;payload> is accepted without a server-side failure - #1.2: Payload with unsupported special characters in the title is accepted without a server-side failure" time="0.614">
+    <system-out><![CDATA[When I create a post with "unsupported special characters in the title".....passed
+Then the response is not a server error.....................................passed
+And the response status is 201..............................................passed
+And the response echoes every submitted field...............................passed
+And the response does not invent a userId...................................passed
+And the gap against the assessment's 4xx expectation is recorded............passed]]></system-out>
+  </testcase>
+  <testcase classname="JSONPlaceholder POST /posts — observed handling of boundary and invalid data" name="Payload with &lt;payload> is accepted without a server-side failure - #1.3: Payload with no userId is accepted without a server-side failure" time="0.662">
+    <system-out><![CDATA[When I create a post with "no userId".......................................passed
+Then the response is not a server error.....................................passed
+And the response status is 201..............................................passed
+And the response echoes every submitted field...............................passed
+And the response does not invent a userId...................................passed
+And the gap against the assessment's 4xx expectation is recorded............passed]]></system-out>
+  </testcase>
+  <testcase classname="JSONPlaceholder POST /posts — observed handling of boundary and invalid data" name="Payload with &lt;payload> is accepted without a server-side failure - #1.4: Payload with no fields at all is accepted without a server-side failure" time="0.513">
+    <system-out><![CDATA[When I create a post with "no fields at all"................................passed
+Then the response is not a server error.....................................passed
+And the response status is 201..............................................passed
+And the response echoes every submitted field...............................passed
+And the response does not invent a userId...................................passed
+And the gap against the assessment's 4xx expectation is recorded............passed]]></system-out>
+  </testcase>
+  <testcase classname="JSONPlaceholder POST /posts — observed handling of boundary and invalid data" name="Payload with &lt;payload> is accepted without a server-side failure - #1.5: Payload with a non-numeric userId is accepted without a server-side failure" time="0.526">
+    <system-out><![CDATA[When I create a post with "a non-numeric userId"............................passed
+Then the response is not a server error.....................................passed
+And the response status is 201..............................................passed
+And the response echoes every submitted field...............................passed
+And the response does not invent a userId...................................passed
+And the gap against the assessment's 4xx expectation is recorded............passed]]></system-out>
+  </testcase>
+  <testcase classname="JSONPlaceholder POST /posts — observed handling of boundary and invalid data" name="Known defect — a malformed JSON body causes a 500 that leaks a stack trace" time="0.572">
+    <system-out><![CDATA[When I send a malformed JSON body...........................................passed
+Then the response status is 500.............................................passed
+And the response body exposes a server stack trace..........................passed
+And the gap against the assessment's 4xx expectation is recorded............passed]]></system-out>
+  </testcase>
+  <testcase classname="SQL scenarios (assessment A4)" name="Round-trip transfers within 10% and 24 hours are found, and nothing else" time="0.012">
+    <system-out><![CDATA[When I run the "roundTripTransactions" query................................passed
+Then the query returns exactly these rows:..................................passed
+And every returned row is a reversal within 10% of the amount sent and at most 24 hours later..passed]]></system-out>
+  </testcase>
+  <testcase classname="SQL scenarios (assessment A4)" name="Players with 30+ runs in at least 3 consecutive 2024 innings" time="0.003">
+    <system-out><![CDATA[When I run the "playerStreaks" query........................................passed
+Then the query returns exactly these rows:..................................passed
+And the result does not include "Dev Malhotra", "Aditya Bose" or "Vikram Rao"..passed]]></system-out>
+  </testcase>
+  <testcase classname="Amortization report" name="Navigating from the dashboard opens the report for the same loan" time="0.774">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+When I calculate a loan of "3200000" at "8.6"% for "20" years...............passed
+And I navigate to "Amortization report".....................................passed
+Then the page heading is "Amortization report"..............................passed
+And the displayed monthly EMI matches the independently calculated EMI......passed
+And the displayed loan amount, total interest and total payment match the independent calculation..passed]]></system-out>
+  </testcase>
+  <testcase classname="Amortization report" name="Full yearly schedule reconciles with the loan" time="0.324">
+    <system-out><![CDATA[Given I open the amortization report for a loan of "2500000" at "10"% for "10" years..passed
+Then the schedule shows 10 rows from "Year 1" to "Year 10"..................passed
+And the report totals for the selected years match the independent calculation..passed
+And the final closing balance is zero.......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Amortization report" name="Filtering by year range and switching to monthly rows" time="0.415">
+    <system-out><![CDATA[Given I open the amortization report for a loan of "2500000" at "10"% for "10" years..passed
+When I filter the report to years 3 to 5....................................passed
+And I group the report by "Monthly".........................................passed
+Then the schedule shows 36 rows from "Month 25" to "Month 60"...............passed
+And the report totals for the selected years match the independent calculation..passed]]></system-out>
+  </testcase>
+  <testcase classname="Amortization report" name="Recalculating on the report updates the schedule and resets filters" time="0.42">
+    <system-out><![CDATA[Given I open the amortization report for a loan of "2500000" at "10"% for "10" years..passed
+And I filter the report to years 2 to 4.....................................passed
+When I calculate a loan of "1000000" at "9"% for "5" years..................passed
+Then the schedule shows 5 rows from "Year 1" to "Year 5"....................passed
+And the report totals for the selected years match the independent calculation..passed]]></system-out>
+  </testcase>
+  <testcase classname="Amortization report" name="Outstanding balance chart plots every selected period" time="0.443">
+    <system-out><![CDATA[Given I open the amortization report for a loan of "5000000" at "7.5"% for "15" years..passed
+When I filter the report to years 6 to 10...................................passed
+Then the "outstanding balance" chart is visible.............................passed
+And the "outstanding balance" chart canvas has been drawn...................passed
+And the "outstanding balance" chart plots 5 periods with a positive balance in each..passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan dashboard" name="Dashboard loads with the calculator, summary and charts" time="0.326">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+Then the page heading is "Loan dashboard"...................................passed
+And the loan calculator form is displayed...................................passed
+And the loan summary shows the monthly EMI, loan amount, total interest, total payment and interest ratio..passed
+And the "principal vs interest" chart is visible............................passed
+And the "yearly payment" chart is visible...................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan dashboard" name="EMI for ₹&lt;amount> at &lt;rate>% over &lt;tenure> &lt;unit> matches the independent calculation - Assessment-style home loans - #1.1: EMI for ₹2500000 at 10% over 10 years matches the independent calculation" time="0.332">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+When I calculate a loan of "2500000" at "10"% for "10" years................passed
+Then the displayed monthly EMI matches the independently calculated EMI.....passed
+And the displayed loan amount, total interest and total payment match the independent calculation..passed
+And the displayed interest-to-principal ratio matches the independent calculation..passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan dashboard" name="EMI for ₹&lt;amount> at &lt;rate>% over &lt;tenure> &lt;unit> matches the independent calculation - Assessment-style home loans - #1.2: EMI for ₹5000000 at 7.5% over 15 years matches the independent calculation" time="0.439">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+When I calculate a loan of "5000000" at "7.5"% for "15" years...............passed
+Then the displayed monthly EMI matches the independently calculated EMI.....passed
+And the displayed loan amount, total interest and total payment match the independent calculation..passed
+And the displayed interest-to-principal ratio matches the independent calculation..passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan dashboard" name="EMI for ₹&lt;amount> at &lt;rate>% over &lt;tenure> &lt;unit> matches the independent calculation - Edge cases - #2.1: EMI for ₹150000.50 at 8.25% over 18 months matches the independent calculation" time="0.427">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+When I calculate a loan of "150000.50" at "8.25"% for "18" months...........passed
+Then the displayed monthly EMI matches the independently calculated EMI.....passed
+And the displayed loan amount, total interest and total payment match the independent calculation..passed
+And the displayed interest-to-principal ratio matches the independent calculation..passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan dashboard" name="EMI for ₹&lt;amount> at &lt;rate>% over &lt;tenure> &lt;unit> matches the independent calculation - Edge cases - #2.2: EMI for ₹120000 at 0% over 12 months matches the independent calculation" time="0.44">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+When I calculate a loan of "120000" at "0"% for "12" months.................passed
+Then the displayed monthly EMI matches the independently calculated EMI.....passed
+And the displayed loan amount, total interest and total payment match the independent calculation..passed
+And the displayed interest-to-principal ratio matches the independent calculation..passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan dashboard" name="EMI for ₹&lt;amount> at &lt;rate>% over &lt;tenure> &lt;unit> matches the independent calculation - Edge cases - #2.3: EMI for ₹100000000 at 50% over 40 years matches the independent calculation" time="0.43">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+When I calculate a loan of "100000000" at "50"% for "40" years..............passed
+Then the displayed monthly EMI matches the independently calculated EMI.....passed
+And the displayed loan amount, total interest and total payment match the independent calculation..passed
+And the displayed interest-to-principal ratio matches the independent calculation..passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan dashboard" name="Principal vs interest chart renders non-zero data that reconciles with the loan" time="0.368">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+When I calculate a loan of "2500000" at "10"% for "10" years................passed
+Then the "principal vs interest" chart is visible...........................passed
+And the "principal vs interest" chart canvas has been drawn.................passed
+And the "principal vs interest" chart shows a non-zero "Principal" value equal to the loan amount..passed
+And the "principal vs interest" chart shows a non-zero "Interest" value equal to the expected total interest..passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan dashboard" name="Yearly payment chart has one bar per loan year with non-zero, correct values" time="0.657">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+When I calculate a loan of "5000000" at "7.5"% for "15" years...............passed
+Then the "yearly payment" chart is visible..................................passed
+And the "yearly payment" chart canvas has been drawn........................passed
+And the "yearly payment" chart has 15 yearly bars...........................passed
+And every yearly bar has a non-zero principal and interest matching the independent schedule..passed
+And the yearly principal amounts add up to the loan amount..................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.1: Rejects loan amount &quot;&quot;" time="0.312">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan amount to ""............................................passed
+And I submit the loan form..................................................passed
+Then the loan amount field shows the error "Loan amount is required.".......passed
+And the loan amount field is marked as invalid..............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.2: Rejects loan amount &quot;0&quot;" time="0.329">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan amount to "0"...........................................passed
+And I submit the loan form..................................................passed
+Then the loan amount field shows the error "Loan amount must be greater than zero."..passed
+And the loan amount field is marked as invalid..............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.3: Rejects loan amount &quot;-5000&quot;" time="0.298">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan amount to "-5000".......................................passed
+And I submit the loan form..................................................passed
+Then the loan amount field shows the error "Loan amount must be greater than zero."..passed
+And the loan amount field is marked as invalid..............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.4: Rejects loan amount &quot;12abc&quot;" time="0.303">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan amount to "12abc".......................................passed
+And I submit the loan form..................................................passed
+Then the loan amount field shows the error "Loan amount must be a number with at most 2 decimal places."..passed
+And the loan amount field is marked as invalid..............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.5: Rejects loan amount &quot;100.555&quot;" time="0.3">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan amount to "100.555".....................................passed
+And I submit the loan form..................................................passed
+Then the loan amount field shows the error "Loan amount must be a number with at most 2 decimal places."..passed
+And the loan amount field is marked as invalid..............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.6: Rejects interest rate &quot;-1&quot;" time="0.316">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the interest rate to "-1"........................................passed
+And I submit the loan form..................................................passed
+Then the interest rate field shows the error "Interest rate cannot be negative."..passed
+And the interest rate field is marked as invalid............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.7: Rejects interest rate &quot;50.01&quot;" time="0.301">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the interest rate to "50.01".....................................passed
+And I submit the loan form..................................................passed
+Then the interest rate field shows the error "Interest rate cannot exceed 50% per annum."..passed
+And the interest rate field is marked as invalid............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.8: Rejects loan tenure &quot;0&quot;" time="0.306">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan tenure to "0"...........................................passed
+And I submit the loan form..................................................passed
+Then the loan tenure field shows the error "Loan tenure must be between 1 and 40 years."..passed
+And the loan tenure field is marked as invalid..............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.9: Rejects loan tenure &quot;2.5&quot;" time="0.317">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan tenure to "2.5".........................................passed
+And I submit the loan form..................................................passed
+Then the loan tenure field shows the error "Loan tenure must be a whole number of years."..passed
+And the loan tenure field is marked as invalid..............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Rejects &lt;field> &quot;&lt;value>&quot; - #1.10: Rejects loan tenure &quot;41&quot;" time="0.309">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan tenure to "41"..........................................passed
+And I submit the loan form..................................................passed
+Then the loan tenure field shows the error "Loan tenure must be between 1 and 40 years."..passed
+And the loan tenure field is marked as invalid..............................passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Tenure limits follow the selected unit" time="0.321">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I calculate a loan of "500000" at "9"% for "481" months................passed
+Then the loan tenure field shows the error "Loan tenure must be between 1 and 480 months."..passed
+And the displayed monthly EMI is unchanged..................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Every invalid field is reported at once" time="0.313">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan amount to ""............................................passed
+And I set the interest rate to "-2".........................................passed
+And I set the loan tenure to "0"............................................passed
+And I submit the loan form..................................................passed
+Then 3 validation errors are displayed......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Loan calculator input validation" name="Correcting the input clears the error and recalculates" time="0.482">
+    <system-out><![CDATA[Given I open the loan dashboard.............................................passed
+And I note the currently displayed monthly EMI..............................passed
+When I set the loan amount to "0"...........................................passed
+And I submit the loan form..................................................passed
+Then the loan amount field shows the error "Loan amount must be greater than zero."..passed
+When I calculate a loan of "750000" at "11"% for "5" years..................passed
+Then no validation errors are displayed.....................................passed
+And the displayed monthly EMI matches the independently calculated EMI......passed]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,1662 @@
+[
+  {
+    "locator": {
+      "id": "loanAmountById",
+      "selector": "#loanAmount",
+      "intent": "The \"Loan amount (₹)\" text input in the loan details form",
+      "route": "/",
+      "expectedRole": "textbox",
+      "whyBroken": "Relies on an internal element id that was renamed (the input id is now \"principal-input\")."
+    },
+    "failureMode": "not-found",
+    "failureDetail": "Selector matched 0 elements.",
+    "candidates": [
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "loan-amount-input",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('loan-amount-input')",
+        "element": "input|loan-amount-input|principal-input|Loan amount (₹)",
+        "score": 0.5,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.50 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "role",
+          "role": "textbox",
+          "name": "Loan amount (₹)",
+          "source": "heuristic",
+          "rationale": "Role plus accessible name."
+        },
+        "code": "page.getByRole('textbox', { name: 'Loan amount (₹)', exact: true })",
+        "element": "input|loan-amount-input|principal-input|Loan amount (₹)",
+        "score": 0.45,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.50 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "label",
+          "label": "Loan amount (₹)",
+          "source": "heuristic",
+          "rationale": "Associated <label> text."
+        },
+        "code": "page.getByLabel('Loan amount (₹)', { exact: true })",
+        "element": "input|loan-amount-input|principal-input|Loan amount (₹)",
+        "score": 0.425,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.50 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "loan-tenure-input",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('loan-tenure-input')",
+        "element": "input|loan-tenure-input|tenure-input|Loan tenure",
+        "score": 0.3333333333333333,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.33 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "role",
+          "role": "textbox",
+          "name": "Loan tenure",
+          "source": "heuristic",
+          "rationale": "Role plus accessible name."
+        },
+        "code": "page.getByRole('textbox', { name: 'Loan tenure', exact: true })",
+        "element": "input|loan-tenure-input|tenure-input|Loan tenure",
+        "score": 0.3,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.33 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "label",
+          "label": "Loan tenure",
+          "source": "heuristic",
+          "rationale": "Associated <label> text."
+        },
+        "code": "page.getByLabel('Loan tenure', { exact: true })",
+        "element": "input|loan-tenure-input|tenure-input|Loan tenure",
+        "score": 0.2833333333333333,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.33 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "interest-rate-input",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('interest-rate-input')",
+        "element": "input|interest-rate-input|annualInterestRate-input|Interest rate (% p.a.)",
+        "score": 0.16666666666666666,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.17 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "role",
+          "role": "textbox",
+          "name": "Interest rate (% p.a.)",
+          "source": "heuristic",
+          "rationale": "Role plus accessible name."
+        },
+        "code": "page.getByRole('textbox', { name: 'Interest rate (% p.a.)', exact: true })",
+        "element": "input|interest-rate-input|annualInterestRate-input|Interest rate (% p.a.)",
+        "score": 0.15,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.17 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "label",
+          "label": "Interest rate (% p.a.)",
+          "source": "heuristic",
+          "rationale": "Associated <label> text."
+        },
+        "code": "page.getByLabel('Interest rate (% p.a.)', { exact: true })",
+        "element": "input|interest-rate-input|annualInterestRate-input|Interest rate (% p.a.)",
+        "score": 0.14166666666666666,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=textbox, expected textbox"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.17 (min 0.3)"
+          },
+          {
+            "name": "editable",
+            "passed": true,
+            "detail": "isEditable()"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      }
+    ],
+    "recommendation": {
+      "candidate": {
+        "strategy": "testid",
+        "testId": "loan-amount-input",
+        "source": "heuristic",
+        "rationale": "Element has its own data-testid."
+      },
+      "code": "page.getByTestId('loan-amount-input')",
+      "element": "input|loan-amount-input|principal-input|Loan amount (₹)",
+      "score": 0.5,
+      "checks": [
+        {
+          "name": "stable name",
+          "passed": true,
+          "detail": "no data-dependent text"
+        },
+        {
+          "name": "unique",
+          "passed": true,
+          "detail": "1 match(es)"
+        },
+        {
+          "name": "visible",
+          "passed": true,
+          "detail": "element is visible"
+        },
+        {
+          "name": "expected role",
+          "passed": true,
+          "detail": "role=textbox, expected textbox"
+        },
+        {
+          "name": "matches intent",
+          "passed": true,
+          "detail": "semantic score 0.50 (min 0.3)"
+        },
+        {
+          "name": "editable",
+          "passed": true,
+          "detail": "isEditable()"
+        },
+        {
+          "name": "survives layout change",
+          "passed": true,
+          "detail": "1 match(es) at 390px wide"
+        }
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "locator": {
+      "id": "calculateByAbsoluteXPath",
+      "selector": "xpath=/html/body/div[1]/main/div[2]/form/button[1]",
+      "intent": "The \"Calculate EMI\" submit button of the loan details form",
+      "route": "/",
+      "expectedRole": "button",
+      "whyBroken": "Absolute XPath recorded before the layout gained an app-shell wrapper and a sidebar."
+    },
+    "failureMode": "not-found",
+    "failureDetail": "Selector matched 0 elements.",
+    "candidates": [
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "calculate-button",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('calculate-button')",
+        "element": "button|calculate-button||Calculate EMI",
+        "score": 0.42857142857142855,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=button, expected button"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.43 (min 0.3)"
+          },
+          {
+            "name": "actionable",
+            "passed": true,
+            "detail": "click({ trial: true })"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "role",
+          "role": "button",
+          "name": "Calculate EMI",
+          "source": "heuristic",
+          "rationale": "Role plus accessible name."
+        },
+        "code": "page.getByRole('button', { name: 'Calculate EMI', exact: true })",
+        "element": "button|calculate-button||Calculate EMI",
+        "score": 0.3857142857142857,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=button, expected button"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.43 (min 0.3)"
+          },
+          {
+            "name": "actionable",
+            "passed": true,
+            "detail": "click({ trial: true })"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      }
+    ],
+    "recommendation": {
+      "candidate": {
+        "strategy": "testid",
+        "testId": "calculate-button",
+        "source": "heuristic",
+        "rationale": "Element has its own data-testid."
+      },
+      "code": "page.getByTestId('calculate-button')",
+      "element": "button|calculate-button||Calculate EMI",
+      "score": 0.42857142857142855,
+      "checks": [
+        {
+          "name": "stable name",
+          "passed": true,
+          "detail": "no data-dependent text"
+        },
+        {
+          "name": "unique",
+          "passed": true,
+          "detail": "1 match(es)"
+        },
+        {
+          "name": "visible",
+          "passed": true,
+          "detail": "element is visible"
+        },
+        {
+          "name": "expected role",
+          "passed": true,
+          "detail": "role=button, expected button"
+        },
+        {
+          "name": "matches intent",
+          "passed": true,
+          "detail": "semantic score 0.43 (min 0.3)"
+        },
+        {
+          "name": "actionable",
+          "passed": true,
+          "detail": "click({ trial: true })"
+        },
+        {
+          "name": "survives layout change",
+          "passed": true,
+          "detail": "1 match(es) at 390px wide"
+        }
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "locator": {
+      "id": "emiByPosition",
+      "selector": ".summary-grid > article:nth-child(2) > p:nth-child(2)",
+      "intent": "The monthly EMI value in the loan summary cards",
+      "route": "/",
+      "expectedRole": "text",
+      "whyBroken": "Positional CSS recorded when EMI was the second card. It still matches an element — the loan amount — so it fails silently with a wrong value instead of a missing element."
+    },
+    "failureMode": "wrong-target",
+    "failureDetail": "Selector matched 1 element (\"Loan amount\", data-testid=\"principal-amount\") whose description scores 0.33 against the intent while another element scores 0.83.",
+    "candidates": [
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "emi-value",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('emi-value')",
+        "element": "p|emi-value||Monthly EMI",
+        "score": 0.8333333333333334,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.83 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "loan-summary",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('loan-summary')",
+        "element": "section|loan-summary||Loan summary",
+        "score": 0.3333333333333333,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.33 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "principal-amount",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('principal-amount')",
+        "element": "p|principal-amount||Loan amount",
+        "score": 0.3333333333333333,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.33 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "total-interest",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('total-interest')",
+        "element": "p|total-interest||Total interest",
+        "score": 0.3333333333333333,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.33 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "total-payment",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('total-payment')",
+        "element": "p|total-payment||Total payment",
+        "score": 0.3333333333333333,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.33 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "interest-ratio",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('interest-ratio')",
+        "element": "p|interest-ratio||Interest-to-principal",
+        "score": 0.3333333333333333,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.33 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "principal-interest-chart",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('principal-interest-chart')",
+        "element": "figure|principal-interest-chart||Principal vs interest",
+        "score": 0,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.00 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "principal-interest-chart-legend",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('principal-interest-chart-legend')",
+        "element": "ul|principal-interest-chart-legend||Principal vs interest legend",
+        "score": 0,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.00 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "principal-interest-chart-legend-value",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('principal-interest-chart-legend-value')",
+        "element": null,
+        "score": 0,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": false,
+            "detail": "2 match(es)"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "principal-interest-chart-data",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('principal-interest-chart-data')",
+        "element": "table|principal-interest-chart-data||",
+        "score": 0,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": false,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.00 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "yearly-payment-chart",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('yearly-payment-chart')",
+        "element": "figure|yearly-payment-chart||Year-wise payment distribution",
+        "score": 0,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.00 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "yearly-payment-chart-legend",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('yearly-payment-chart-legend')",
+        "element": "ul|yearly-payment-chart-legend||Year-wise payment distribution legend",
+        "score": 0,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.00 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "yearly-payment-chart-legend-value",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('yearly-payment-chart-legend-value')",
+        "element": null,
+        "score": 0,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": false,
+            "detail": "2 match(es)"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "yearly-payment-chart-data",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('yearly-payment-chart-data')",
+        "element": "table|yearly-payment-chart-data||",
+        "score": 0,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": false,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=none, expected text"
+          },
+          {
+            "name": "matches intent",
+            "passed": false,
+            "detail": "semantic score 0.00 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      }
+    ],
+    "recommendation": {
+      "candidate": {
+        "strategy": "testid",
+        "testId": "emi-value",
+        "source": "heuristic",
+        "rationale": "Element has its own data-testid."
+      },
+      "code": "page.getByTestId('emi-value')",
+      "element": "p|emi-value||Monthly EMI",
+      "score": 0.8333333333333334,
+      "checks": [
+        {
+          "name": "stable name",
+          "passed": true,
+          "detail": "no data-dependent text"
+        },
+        {
+          "name": "unique",
+          "passed": true,
+          "detail": "1 match(es)"
+        },
+        {
+          "name": "visible",
+          "passed": true,
+          "detail": "element is visible"
+        },
+        {
+          "name": "expected role",
+          "passed": true,
+          "detail": "role=none, expected text"
+        },
+        {
+          "name": "matches intent",
+          "passed": true,
+          "detail": "semantic score 0.83 (min 0.3)"
+        },
+        {
+          "name": "survives layout change",
+          "passed": true,
+          "detail": "1 match(es) at 390px wide"
+        }
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "locator": {
+      "id": "calculateByStaleText",
+      "selector": "role=button[name=\"Compute EMI\"]",
+      "intent": "The \"Calculate EMI\" submit button of the loan details form",
+      "route": "/",
+      "expectedRole": "button",
+      "whyBroken": "Uses button copy that has since changed from \"Compute EMI\" to \"Calculate EMI\"."
+    },
+    "failureMode": "not-found",
+    "failureDetail": "Selector matched 0 elements.",
+    "candidates": [
+      {
+        "candidate": {
+          "strategy": "testid",
+          "testId": "calculate-button",
+          "source": "heuristic",
+          "rationale": "Element has its own data-testid."
+        },
+        "code": "page.getByTestId('calculate-button')",
+        "element": "button|calculate-button||Calculate EMI",
+        "score": 0.42857142857142855,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=button, expected button"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.43 (min 0.3)"
+          },
+          {
+            "name": "actionable",
+            "passed": true,
+            "detail": "click({ trial: true })"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "role",
+          "role": "button",
+          "name": "Calculate EMI",
+          "source": "heuristic",
+          "rationale": "Role plus accessible name."
+        },
+        "code": "page.getByRole('button', { name: 'Calculate EMI', exact: true })",
+        "element": "button|calculate-button||Calculate EMI",
+        "score": 0.3857142857142857,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=button, expected button"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.43 (min 0.3)"
+          },
+          {
+            "name": "actionable",
+            "passed": true,
+            "detail": "click({ trial: true })"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      }
+    ],
+    "recommendation": {
+      "candidate": {
+        "strategy": "testid",
+        "testId": "calculate-button",
+        "source": "heuristic",
+        "rationale": "Element has its own data-testid."
+      },
+      "code": "page.getByTestId('calculate-button')",
+      "element": "button|calculate-button||Calculate EMI",
+      "score": 0.42857142857142855,
+      "checks": [
+        {
+          "name": "stable name",
+          "passed": true,
+          "detail": "no data-dependent text"
+        },
+        {
+          "name": "unique",
+          "passed": true,
+          "detail": "1 match(es)"
+        },
+        {
+          "name": "visible",
+          "passed": true,
+          "detail": "element is visible"
+        },
+        {
+          "name": "expected role",
+          "passed": true,
+          "detail": "role=button, expected button"
+        },
+        {
+          "name": "matches intent",
+          "passed": true,
+          "detail": "semantic score 0.43 (min 0.3)"
+        },
+        {
+          "name": "actionable",
+          "passed": true,
+          "detail": "click({ trial: true })"
+        },
+        {
+          "name": "survives layout change",
+          "passed": true,
+          "detail": "1 match(es) at 390px wide"
+        }
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "locator": {
+      "id": "chartCanvasByLibraryClass",
+      "selector": "canvas.chartjs-render-monitor",
+      "intent": "The canvas of the \"Principal vs interest\" doughnut chart",
+      "route": "/",
+      "expectedRole": "img",
+      "whyBroken": "Depends on a CSS class Chart.js 2.x injected; Chart.js 3+ no longer adds it. A typical AI-suggested selector from outdated training data."
+    },
+    "failureMode": "not-found",
+    "failureDetail": "Selector matched 0 elements.",
+    "candidates": [
+      {
+        "candidate": {
+          "strategy": "scoped-role",
+          "testId": "principal-interest-chart",
+          "role": "img",
+          "source": "heuristic",
+          "rationale": "Role inside the closest identified container \"principal-interest-chart\"."
+        },
+        "code": "page.getByTestId('principal-interest-chart').getByRole('img')",
+        "element": "canvas|||Principal 63.06%, Interest 36.94%",
+        "score": 0.6400000000000001,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=img, expected img"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.80 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "scoped-role",
+          "testId": "yearly-payment-chart",
+          "role": "img",
+          "source": "heuristic",
+          "rationale": "Role inside the closest identified container \"yearly-payment-chart\"."
+        },
+        "code": "page.getByTestId('yearly-payment-chart').getByRole('img')",
+        "element": "canvas|||Stacked bar chart of principal and interest paid across 10 years",
+        "score": 0.6400000000000001,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": true,
+            "detail": "no data-dependent text"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=img, expected img"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.80 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": true
+      },
+      {
+        "candidate": {
+          "strategy": "role",
+          "role": "img",
+          "name": "Principal 63.06%, Interest 36.94%",
+          "source": "heuristic",
+          "rationale": "Role plus accessible name."
+        },
+        "code": "page.getByRole('img', { name: 'Principal 63.06%, Interest 36.94%', exact: true })",
+        "element": "canvas|||Principal 63.06%, Interest 36.94%",
+        "score": 0.7200000000000001,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": false,
+            "detail": "name contains numbers that change with the data"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=img, expected img"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.80 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      },
+      {
+        "candidate": {
+          "strategy": "role",
+          "role": "img",
+          "name": "Stacked bar chart of principal and interest paid across 10 years",
+          "source": "heuristic",
+          "rationale": "Role plus accessible name."
+        },
+        "code": "page.getByRole('img', { name: 'Stacked bar chart of principal and interest paid across 10 years', exact: true })",
+        "element": "canvas|||Stacked bar chart of principal and interest paid across 10 years",
+        "score": 0.7200000000000001,
+        "checks": [
+          {
+            "name": "stable name",
+            "passed": false,
+            "detail": "name contains numbers that change with the data"
+          },
+          {
+            "name": "unique",
+            "passed": true,
+            "detail": "1 match(es)"
+          },
+          {
+            "name": "visible",
+            "passed": true,
+            "detail": "element is visible"
+          },
+          {
+            "name": "expected role",
+            "passed": true,
+            "detail": "role=img, expected img"
+          },
+          {
+            "name": "matches intent",
+            "passed": true,
+            "detail": "semantic score 0.80 (min 0.3)"
+          },
+          {
+            "name": "survives layout change",
+            "passed": true,
+            "detail": "1 match(es) at 390px wide"
+          }
+        ],
+        "accepted": false
+      }
+    ],
+    "needsHumanReview": "Top candidates point at different elements with close scores (0.64 vs 0.64)."
+  }
+]

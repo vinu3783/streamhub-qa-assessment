@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="13.138" tests="5" skipped="0" failures="5" errors="0" timestamp="2026-10-05T12:01:38.628Z">
+  <testcase classname="AI self-healing exercise — deliberately broken locators" name="Broken locator 1 — loan amount input by a renamed element id" time="3.288">
+    <failure type="TimeoutError2" message="locator.fill: Timeout 3000ms exceeded.&#xA;Call log:&#xA;[2m  - waiting for locator('#loanAmount')[22m&#xA;"><![CDATA[locator.fill: Timeout 3000ms exceeded.
+Call log:
+[2m  - waiting for locator('#loanAmount')[22m
+
+    at LegacyDashboardPage.enterLoanAmount (E:\vinu\Streamhub Fullstack\tests\pages\legacy\LegacyDashboardPage.ts:39:32)
+    at TestWorld.<anonymous> (E:\vinu\Streamhub Fullstack\tests\step-definitions\self-healing.steps.ts:15:36)]]></failure>
+    <system-out><![CDATA[Given I open the dashboard with the legacy page object......................passed
+When I enter "3000000" as the loan amount using the legacy locator..........failed]]></system-out>
+  </testcase>
+  <testcase classname="AI self-healing exercise — deliberately broken locators" name="Broken locator 2 — calculate button by absolute XPath" time="3.163">
+    <failure type="TimeoutError2" message="locator.click: Timeout 3000ms exceeded.&#xA;Call log:&#xA;[2m  - waiting for locator('xpath=/html/body/div[1]/main/div[2]/form/button[1]')[22m&#xA;"><![CDATA[locator.click: Timeout 3000ms exceeded.
+Call log:
+[2m  - waiting for locator('xpath=/html/body/div[1]/main/div[2]/form/button[1]')[22m
+
+    at LegacyDashboardPage.clickCalculateByXPath (E:\vinu\Streamhub Fullstack\tests\pages\legacy\LegacyDashboardPage.ts:43:39)
+    at TestWorld.<anonymous> (E:\vinu\Streamhub Fullstack\tests\step-definitions\self-healing.steps.ts:20:34)]]></failure>
+    <system-out><![CDATA[Given I open the dashboard with the legacy page object......................passed
+When I click calculate using the legacy absolute XPath......................failed]]></system-out>
+  </testcase>
+  <testcase classname="AI self-healing exercise — deliberately broken locators" name="Broken locator 3 — EMI value by position (silently matches the wrong card)" time="0.25">
+    <failure type="ExpectError" message="Monthly EMI: displayed ₹2500000 but independently expected ₹33037.68&#xA;&#xA;expect(received).toBeLessThanOrEqual(expected)&#xA;&#xA;Expected: &lt;= 0.01&#xA;Received:    2466962.32"><![CDATA[Error: Monthly EMI: displayed ₹2500000 but independently expected ₹33037.68
+
+expect(received).toBeLessThanOrEqual(expected)
+
+Expected: <= 0.01
+Received:    2466962.32
+    at captureRawStack (E:\vinu\Streamhub Fullstack\node_modules\playwright-core\lib\coreBundle.js:8588:17)
+    at callMatcherAsStep (E:\vinu\Streamhub Fullstack\node_modules\playwright\lib\matchers\expect.js:13310:57)
+    at Object.toBeLessThanOrEqual (E:\vinu\Streamhub Fullstack\node_modules\playwright\lib\matchers\expect.js:13302:23)
+    at expectMoney (E:\vinu\Streamhub Fullstack\tests\utils\assertions.ts:12:5)
+    at TestWorld.<anonymous> (E:\vinu\Streamhub Fullstack\tests\step-definitions\self-healing.steps.ts:31:5)]]></failure>
+    <system-out><![CDATA[Given I open the dashboard with the legacy page object......................passed
+Then the legacy EMI locator shows the EMI for the default loan of 2500000 at 10% for 10 years..failed]]></system-out>
+  </testcase>
+  <testcase classname="AI self-healing exercise — deliberately broken locators" name="Broken locator 4 — calculate button by outdated button text" time="3.181">
+    <failure type="TimeoutError2" message="locator.click: Timeout 3000ms exceeded.&#xA;Call log:&#xA;[2m  - waiting for locator('role=button[name=&quot;Compute EMI&quot;]')[22m&#xA;"><![CDATA[locator.click: Timeout 3000ms exceeded.
+Call log:
+[2m  - waiting for locator('role=button[name="Compute EMI"]')[22m
+
+    at LegacyDashboardPage.clickCalculateByText (E:\vinu\Streamhub Fullstack\tests\pages\legacy\LegacyDashboardPage.ts:47:38)
+    at TestWorld.<anonymous> (E:\vinu\Streamhub Fullstack\tests\step-definitions\self-healing.steps.ts:24:34)]]></failure>
+    <system-out><![CDATA[Given I open the dashboard with the legacy page object......................passed
+When I click calculate using the legacy button text.........................failed]]></system-out>
+  </testcase>
+  <testcase classname="AI self-healing exercise — deliberately broken locators" name="Broken locator 5 — chart canvas by a class from an older Chart.js version" time="3.183">
+    <failure type="ExpectError" message="expect(locator).toBeVisible() failed&#xA;&#xA;Locator: locator('canvas.chartjs-render-monitor')&#xA;Expected: visible&#xA;Timeout: 3000ms&#xA;Error: element(s) not found&#xA;&#xA;Call log:&#xA;  - Expect &quot;toBeVisible&quot; locator('canvas.chartjs-render-monitor') with timeout 3000ms&#xA;  - waiting for locator('canvas.chartjs-render-monitor')&#xA;"><![CDATA[Error: expect(locator).toBeVisible() failed
+
+Locator: locator('canvas.chartjs-render-monitor')
+Expected: visible
+Timeout: 3000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" locator('canvas.chartjs-render-monitor') with timeout 3000ms
+  - waiting for locator('canvas.chartjs-render-monitor')
+
+    at captureRawStack (E:\vinu\Streamhub Fullstack\node_modules\playwright-core\lib\coreBundle.js:8588:17)
+    at callMatcherAsStep (E:\vinu\Streamhub Fullstack\node_modules\playwright\lib\matchers\expect.js:13310:57)
+    at Object.toBeVisible (E:\vinu\Streamhub Fullstack\node_modules\playwright\lib\matchers\expect.js:13302:23)
+    at TestWorld.<anonymous> (E:\vinu\Streamhub Fullstack\tests\step-definitions\self-healing.steps.ts:41:48)]]></failure>
+    <system-out><![CDATA[Given I open the dashboard with the legacy page object......................passed
+Then the legacy chart canvas locator finds a visible chart..................failed]]></system-out>
+  </testcase>
+</testsuite>
